@@ -1,0 +1,798 @@
+/*-- Space-Class --*/
+
+[class|=space] {
+    display: block;
+    width: 100%;
+    overflow: hidden
+}
+
+.space-10 {
+    height: 10px;
+}
+
+.space-20 {
+    height: 20px;
+}
+
+.space-30 {
+    height: 30px;
+}
+
+.space-40 {
+    height: 40px;
+}
+
+.space-50 {
+    height: 50px;
+}
+
+.space-60 {
+    height: 60px;
+}
+
+.space-70 {
+    height: 70px;
+}
+
+.space-80 {
+    height: 80px;
+}
+
+.space-90 {
+    height: 90px;
+}
+
+.space-100 {
+    height: 100px;
+}
+
+.space-200{
+	height:200px;
+}
+
+.space-250{
+	height:250px;
+}
+
+.space-300{
+	height:300px;
+}
+@media only screen and (min-width: 1280px) and (max-width: 1440px)  {
+	.home-area{
+		background-position: 0 0;
+	}
+	
+	.header{
+		height:145px
+	}
+	
+	.home-area .mobile-image{
+		width: 82%;
+	    margin-right: 3em;
+	}
+	.team-box {
+	    margin-top: 5em;
+		margin-right:18em
+	}
+	
+}
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+	.mobile-image{
+		width: 72.5%;
+	}
+	
+	.mobile-image img{
+		margin-right: 6em;
+	}
+	
+	.home-area{
+		background-position: 0px 0;
+		padding-bottom:1em
+	}
+	.home-area .logo{
+		width:70%;
+	}
+	h3{
+		font-size:45px;
+		margin-top: 2.5em;
+	}
+	.hidden-xs {
+    	height: 3em;
+	}
+	.insp-area{
+		margin:2em 0
+	}
+	
+	.section-padding{
+		padding:60px 0;
+		background-size: 80%;
+	}
+    .footer-bottom .footer-menu ul,
+    .footer-area {
+        text-align: center;
+    }
+    .angle:after {
+        height: 80px;
+    }
+	.signup-form{
+		background-position:30em 45em;
+	}
+	.CodeInput{
+		width:25%
+	}	
+	.team-box {
+    	margin-bottom: 5em;
+		margin-top: 7em;
+		width: 50%;
+		margin-right: 13em;		
+	}
+
+	.team-box a{
+		margin-right: 4.5em;
+	}	
+}
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	/*--Home-Area--*/
+    .home-area {
+        padding: 25px 0;
+        margin-bottom: 0;
+		background:url(../images/Bg-responsive.png) no-repeat center 0;
+    }
+	h3{
+		margin-bottom:45px;
+	}
+	.bttn-insp{
+		padding: 0px;
+		font-size: 3em;
+		border-radius: 10px;
+		height: 1em;;
+	}
+	input{
+		width:55%
+	}
+	.num, .birthday{
+		width:27.5%;
+	}
+	.hidden-xs{
+		display:none !important;
+	}
+    .mobile-image {
+        display: none !important;
+    }
+	/*--Section-Area--*/
+	.section-padding{
+		padding:0;
+		background-size: 100%;
+	}
+	.title{
+		font-size:5em	
+	}
+	[class|=space]{
+		display:none !important	
+	}
+	.tab-content p{
+		font-size:18px	
+	}
+	.terms{
+		margin:5em;
+		text-align:justify	
+	}
+	.insp-area{
+		margin:2em	
+	}
+	
+	h2{
+		font-size:3em;
+		margin-bottom:1em;
+	}
+	.signup-form{
+		background-position:28em 35em;
+	}
+	/*--footer-area--*/
+	.footer-box.logo img{
+		margin-top:0
+	}
+	
+	.footer-box{
+		text-align:center
+	}
+	
+	.footer-box h4{
+		margin:0;
+		font-size:3em;
+		font-weight:bold
+	}
+	
+	.footer-bottom p{
+		font-size: 35px;
+	    text-align: center;	
+	}
+	
+	.mail{
+		font-size:30px
+	}
+	
+	.footer-box.about{
+		margin: 2em 0	
+	}
+	
+	.footer-box.nav-menu{
+		padding:0	
+	}
+	
+    .footer-bottom .footer-menu ul,
+    .footer-area {
+        text-align: center;
+    }
+    .angle:after {
+        height: 80px;
+    }
+	/*--confirmation-sccs--*/
+	.conf-area{
+		margin:0
+	}
+	.form-group img{
+		float:inherit
+	}
+	.team-box {
+    	margin-bottom: 5em;
+		margin-top: 7em;
+		width: 100%;
+		margin-right: 0;		
+	}	
+}
+
+/* Mobile Layout: 767px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {	
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+	.title{
+		font-size:4em;	
+	}
+	h2{
+		font-size:2.5em;
+		margin-bottom:1em
+	}
+    h3 {
+        font-size: 30px;
+		margin-bottom:30px;
+		margin-top:0
+    }
+	.hidden-xs {
+    	height: 1em;
+	}
+	[class|=space]{
+		display:none !important
+	}
+    .bttn-white {
+        padding: 8px 30px;
+    }
+	
+	.bttn-insp{
+		width:50%
+	}
+
+	button[type="submit"]{
+		width:45%	
+	}
+	
+    .section-padding {
+        padding-top: 35px;
+        padding-bottom: 35px;
+		background:none
+    }
+	.insp-area{
+		margin:0 0 4em 0;
+	}
+	
+    .angle:after {
+        height: 60px;
+    }
+	.terms {
+    	margin: 0 1em;
+		text-align:justify
+	}
+    /*-- Home-Area --*/
+    .home-area {
+        padding-top: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+		background: url(../images/Bg-responsive.png) no-repeat scroll center bottom / cover;
+	    background-position: -30em -4em;
+    }
+	
+    .mobile-image {
+        display: none !important;
+    }
+
+	.form-title span{
+		margin-right:0;
+		font-size: 28.5px;
+	}
+	
+	input[type="tel"].post{
+		width:20%
+	}
+	
+	input[type="tel"].num{
+		width:43%;
+		float:right;
+		margin-right:1em;
+		text-align:left;
+		background:url(../images/+216.png) no-repeat scroll -2px 10px;
+		padding-left: 42px;
+	}
+	
+	.code{
+		width:60%
+	}
+	
+	.nat-code{
+		display:none
+	}
+
+	/*--end home area--*/
+	.form-submit{
+		padding: 12px 8px;
+	    font-size: 22px;
+		-webkit-border-radius: 10px;
+	}
+	
+	.footer-box.nav-menu {
+    	padding: 0;
+	}
+	
+	.footer-box{
+		text-align:center;
+	}
+	
+	.footer-box h4{
+		margin:0	
+	}
+	
+    .footer-bottom .footer-menu ul,
+    .footer-area {
+        text-align: center;
+    }
+	.footer-box p {
+		text-align:center	
+	}
+    .subscribe-form {
+        padding: 20px;
+    }
+    .subscribe-form form .bttn-white {
+        position: static;
+        margin-top: 20px;
+    }
+    .subscribe-form form .control {
+        padding-right: 15px;
+    }
+
+    .post-single.sticky .post-media {
+        margin-right: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .form-double .box {
+        width: 100%;
+        float: none;
+    }
+    .post-single {
+        padding: 20px;
+    }
+    .post-single h2 {
+        font-size: 26px;
+    }
+    .post-single blockquote {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .comments-list .comment {
+        padding-left: 0;
+    }
+    .comments-list .comment .comment-pic {
+        position: static;
+        margin-bottom: 30px;
+    }	
+}
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 350px)and (max-width: 480px){	
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+	.title{
+		font-size:4em;	
+	}
+	h2{
+		font-size:2.5em;
+		margin-bottom:1em
+	}
+    h3 {
+        font-size: 30px;
+		margin-bottom:30px;
+		margin-top:0
+    }
+	.hidden-xs {
+    	height: 1em;
+	}
+	[class|=space]{
+		display:none !important
+	}
+    .bttn-white {
+        padding: 8px 30px;
+    }
+	
+	.bttn-insp{
+		width:50%
+	}
+
+	button[type="submit"]{
+		width:50%	
+	}
+	
+    .section-padding {
+        padding-top: 35px;
+        padding-bottom: 35px;
+		background:none
+    }
+	.insp-area{
+		margin:0 0 4em 0;
+		text-align:center
+	}
+	
+    .angle:after {
+        height: 60px;
+    }
+	.terms {
+    	margin: 0 1em;
+		text-align:justify
+	}
+    /*-- Home-Area --*/
+    .home-area {
+        padding-top: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+		background: url(../images/Bg-responsive.png) no-repeat scroll center bottom / cover;
+	    background-position: center -5em;
+    }
+	
+    .mobile-image {
+        display: none !important;
+    }
+
+	.form-title span{
+		margin-right:0;
+		font-size: 20px;
+	}
+
+	.checkbox-civil{
+		font-size:18px
+	}
+	
+	input{
+		width:79%
+	}
+	
+	input::placeholder{
+		font-size:20px	
+	}
+	
+		
+	input[type="tel"].post{
+		width:22%;
+		margin: 0 12px;
+	}
+	
+	input[type="tel"].num{
+		float:right;
+		margin-right:1em;
+		text-align: center;
+		background:url(../images/+216.png) no-repeat scroll -2px 7px;
+		padding-left: 34px;
+		font-size: 30px;
+	}
+	input[type="tel"].birthday {
+		font-size:22px;
+		float: right;
+		padding:0;
+		text-align:right
+	}
+	.num, .birthday{
+		width:50%;
+	}
+	.code{
+		width:60%
+	}
+	
+	.nat-code{
+		display:none
+	}
+	
+	.conf-area{
+		margin:0;
+	}
+	.CodeInput{
+		width:50%;
+		display:inline-block;
+		text-align:center
+	}
+	.CodeInput placeholder{
+		font-size:2em	
+	}
+	/*.form-group img{
+		float:inherit
+	}*/
+	
+	/*--end home area--*/
+	.form-submit{
+		padding: 12px 8px;
+	    font-size: 22px;
+		-webkit-border-radius: 10px;
+	}
+	
+	.footer-box.nav-menu {
+    	padding: 0;
+	}
+	
+	.footer-box{
+		text-align:center;
+	}
+	
+	.footer-box h4{
+		margin:0	
+	}
+	
+    .footer-bottom .footer-menu ul,
+    .footer-area {
+        text-align: center;
+    }
+	.footer-box p {
+		text-align:center	
+	}
+    .subscribe-form {
+        padding: 20px;
+    }
+    .subscribe-form form .bttn-white {
+        position: static;
+        margin-top: 20px;
+    }
+    .subscribe-form form .control {
+        padding-right: 15px;
+    }
+
+    .post-single.sticky .post-media {
+        margin-right: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .form-double .box {
+        width: 100%;
+        float: none;
+    }
+	.team-box {
+    	margin-bottom: 5em;
+		margin-top: 5em;
+		width: 100%;
+		margin-right: 0;		
+	}
+	.team-box a{
+		margin-right: 2em;
+	}
+	
+/*--confirmation css--*/
+	.conf-area{
+		margin:0
+	}
+	.form-group img{
+		float:inherit	
+	}
+	
+}
+
+/* Mobile Layout: 767px. */
+@media only screen and (max-width: 350px){
+	body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+	.title{
+		font-size:4em;	
+	}
+	h2{
+		font-size:2.5em;
+		/*margin-bottom:1em*/
+	}
+    h3 {
+        font-size: 25px;
+		margin-bottom:30px;
+		margin-top:0
+    }
+	.bttn-insp{
+		border-radius:1em;
+		font-size:3em;
+		height:1.3em
+	}
+	.hidden-xs {
+    	height: 1em;
+	}
+	[class|=space]{
+		display:none !important
+	}
+    .bttn-white {
+        padding: 8px 30px;
+    }
+	
+	.bttn-insp{
+		width:50%
+	}
+
+	button[type="submit"]{
+		width:50%	
+	}
+	
+    .section-padding {
+        padding-top: 35px;
+        padding-bottom: 35px;
+		background:none
+    }
+	.insp-area{
+		margin:0 0 4em 0;
+	}
+	
+    .angle:after {
+        height: 60px;
+    }
+	.terms {
+    	margin: 0 1em;
+		text-align:justify
+	}
+    /*-- Home-Area --*/
+    .home-area {
+        padding-top: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+		background: url(../images/Bg-responsive.png) no-repeat scroll center bottom / cover;
+	    background-position: center -5em;
+    }
+	
+    .mobile-image {
+        display: none !important;
+    }
+
+	.form-title span{
+		margin-right:0;
+		font-size: 20px;
+	}
+
+	.checkbox-civil{
+		font-size:18px
+	}
+	
+	input{
+		width:80%
+	}
+	
+	input::placeholder{
+		font-size:20px	
+	}
+	
+		
+	input[type="tel"].post{
+		width:40%;
+		margin-right:12px;
+	}
+	
+	input[type="tel"].num{
+		float:right;
+		margin-right:1.5em;
+		text-align:center;
+		padding:0;
+		font-size: 20px;
+	}
+	input[type="tel"].birthday {
+		background:none;
+		font-size:22px;
+		float: right;
+		padding:0;
+		text-align:center
+	}
+	.num, .birthday{
+		width:40%;
+	}
+	.code{
+		width:60%
+	}
+	
+	.nat-code{
+		display:none
+	}
+	
+	/*--confirmation-area--*/
+	.CodeInput{
+		width:50%;
+		display:inline-block
+	}
+	.form-group img{
+		float:inherit
+	}
+
+	/*--end home area--*/
+	.form-submit{
+		padding: 12px 8px;
+	    font-size: 22px;
+		-webkit-border-radius: 10px;
+	}
+	
+	.footer-box.nav-menu {
+    	padding: 0;
+	}
+	
+	.footer-box{
+		text-align:center;
+	}
+	
+	.footer-box h4{
+		margin:0	
+	}
+	
+    .footer-bottom .footer-menu ul,
+    .footer-area {
+        text-align: center;
+    }
+	.footer-box p {
+		text-align:center	
+	}
+    .subscribe-form {
+        padding: 20px;
+    }
+    .subscribe-form form .bttn-white {
+        position: static;
+        margin-top: 20px;
+    }
+    .subscribe-form form .control {
+        padding-right: 15px;
+    }
+
+    .post-single.sticky .post-media {
+        margin-right: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .form-double .box {
+        width: 100%;
+        float: none;
+    }
+	.team-box {
+    	margin-bottom: 5em;
+		margin-top: 7em;
+		width: 100%;
+		margin-right: 0;		
+	}
+	.team-box a{
+		    margin-right: 1.5em;
+	}
+	
+}
+
+
+

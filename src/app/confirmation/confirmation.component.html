@@ -1,0 +1,142 @@
+
+<div data-spy="scroll" data-target=".mainmenu-area" id="InscriptionConfirmé">
+
+    <!-- <div class="preloader">
+
+        <div class="status"></div>
+
+    </div>  -->
+
+  <header class="home-area overlay angle" id="home_page">
+    <div class="container">
+        <div class="row">
+       <div class="col-xs-12 hidden-sm col-md-5">
+                <figure class="mobile-image wow fadeInUp" data-wow-delay="0.2s">
+                    <img src="assets/images/header-mobile.png" class="img-responsive" alt="">
+                </figure>
+             </div>
+             <div class="col-xs-12 col-md-7" style="text-align:center">
+                <div class="space-30 hidden-xs"></div>
+                <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                    <img src="assets/images/Logo.png" class="logo">
+                </div>
+                <div class="space-200 hidden-xs header"></div>
+                <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                    <h3>باش توصلك كل يوم توقعات برجك <br> سجل في خدمة Horoscopi</h3>
+                </div>
+                <div class="space-40 hidden-xs"></div>
+                <a (click)="NewInscription()" class="bttn-insp wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download">التسجيل</i></a>
+             </div>
+        </div>
+    </div>
+ </header>
+
+  <section class="section-padding" id="about_page">
+                  <div class="container">
+                    <div class="row">                  
+                        <div class="col-xs-12 col-md-10 col-md-offset-1">
+                            <form name="form2" id ="formClean" (ngSubmit)="f2.form.valid &&  GetCodeCheck2(id_code,msisdn)  "  #f2="ngForm" novalidate >
+                                <div class="insp-area">
+                                <h2 class="conf-area">تأكيد التسجيل</h2>
+
+                                <div class="space-30 hidden-xs"></div> 
+
+                                <h5 class="conf-area">الرجاء إدخال رمز التأكيد المرسل على هاتفك الجوال</h5>  
+                                
+                                <div class="space-30"></div> 
+
+                                <div class="form-group"   >
+                                                <img src="assets/images/Icones/icon-num.png" class="icon"> 
+                                                <input class="CodeInput" type="tel" name="msisdn" id="msisdn"  [(ngModel)]="msisdn" />  
+                                </div> 
+                                <div class="form-group"   >
+                                                <img src="assets/images/Icones/code-conf.png" class="icon"> 
+                                                <input class="CodeInput" type="tel" name="id_code" id="id_code"  [(ngModel)]="id_code"
+                                                placeholder="رمز التأكيد" />  
+                                </div>                    
+                                                
+                                <div class="form-group"   >
+                                        <h5>إن لم يصلك رمز التأكيد،   
+                                            <a  (click)="ResendCode()"  style="text-decoration: underline;cursor:pointer; font-size: 20px;">إعادة الإرسال</a></h5>                          
+                                                                            
+                                </div>
+
+                                <div class="form-group text-center" [hidden]="isCodeAlertMessageHidden">                               
+                                        <label class="alert alert-danger"   role="alert" >
+                                                <i  class="mdi mdi-alert-circle" ></i> الرجاء التثبت من رمز التأكيد أو رقم الجوال.
+                                                </label>    
+                                </div>   
+                            
+                                
+                                <div  class="form-group text-center" [hidden]="!isCodeMessageHidden"  >                              
+                                    <button  href='#InscriptionConfirmé' type="submit" name="signup" id="signup" class="btn btn-light"                                             
+                                    value='Je confirme'  style=" color: #fff" >تأكيد</button>
+                                    &nbsp; &nbsp;
+        
+                                    <!-- <button (click)="NewInscription()"  type="submit" name="signup" id="signup" class="btn btn-light"  
+                                    style=" color: #fff"  > تسجيل جديد</button> -->
+                                    <!-- <a style="text-decoration: underline;" >Renvoyer code</a> -->
+                                </div> 
+                                
+
+                                <div class="form-group text-center" [hidden]="isCodeMessageHidden" >                               
+                                        <label class="alert alert-info"  role="alert" >
+                                                <i  class="mdi mdi-alert-circle" ></i>  لقد تم التسجيل بنجاح، سوف تصلك توقعات حظك اليومية. سعر الخدمة: 70 مليم/الإرسالية. 
+                                            </label>    
+                                </div> 
+                                
+                                <div class="text-center">
+                                    <p> بتأكيد التسجيل في خدمة Horoscopi , سيتم تسجيلك في الخدمة وفقًا <a routerLink="/termes" target="_blank">لشروط الاستخدام</a><br> وستتم معالجة بياناتك الشخصية وفقًا  <a routerLink="/confidentialite" target="_blank">لسياسة الخصوصية</a> </p>
+                                </div>
+
+                                </div>                 
+                            </form> 
+                        </div>
+                    </div>
+                  </div>
+  </section>  
+
+  <footer class="footer-area" id="contact_page"> 
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="footer-box logo">
+                       <a routerLink="/inscription" ><img src="assets/images/Logo.png"></a>
+                        <p> باش تعرف حظك، إشترك في Horoscopi<br> يوصلك كل يومSMS  فيه  توقعات برجك.</p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>   
+                        <a style="color:#fff" class="mail">Hello@horoscopi.tn</a>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-md-4">
+      <div class="space-100"></div>
+                    <div class="footer-box nav-menu">
+                        <ul>
+                            <li><a (click)="NewInscription()">تسجيل</a></li>
+                            <li><a routerLink="/termes" target="_blank">شروط الإستخدام</a></li>
+                            <li><a routerLink="/confidentialite" target="_blank">سياسة الخصوصية</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-md-4">
+                    <div class="footer-box about">
+                        <h4>  من نحن </h4>
+                        <p> Horoscopi خدمة ترفيهية، لتلقي التوقعات اليومية للأبراج بالعربية عبر الإرساليات القصيرة. سعر الخدمة: 70 مليم/اإلرسالية </p>
+                    </div>
+                    <div class="footer-box scl-md">
+                        <ul>                                                                        
+                        <li><a href="https://www.facebook.com/Horoscopi-100206528054633/" target="_blank"><img src="assets/images/Social media/fb.png"></a></li>
+                        <li><a href="https://www.instagram.com/horoscopi.tn/" target="_blank"><img src="assets/images/Social media/inst.png"></a></li>
+                        </ul>                                                                   
+        </div>
+                </div>                                    
+            </div>
+            <div class="col-xs-12">
+              <p class="text-center">خدمة مطورة من قبل &nbsp; <a href="https://www.l-2t.com/" target="_blank"><img src="assets/images/L2T.png"></a></p>
+            </div>
+        </div>
+    </div>
+  </footer> 
+</div>

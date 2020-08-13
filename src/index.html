@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+
+    <meta name="author" content="Horoscopi">
+    <meta name="description" content="Horoscopi  خدمة ترفيهية، لتلقي التوقعات اليومية للأبراج  بالعربية، عبر الإرساليات القصيرة. سعر الخدمة: 70 مليم ">
+    <meta name="keywords" content="Horoscope par SMS, Horoscope Tunisie, Horoscope 2020, Horoscope du jour, 
+    حظك اليوم، برجك اليوم، أبراج 2020، الحمل ،الثور ،الجوزاء ،السرطان ،الأسد ،العذراء ،الميزان ،العقرب ،القوس الدلو، الحوت ،الجدي، توقعات الأبراج.">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horoscopi &nbsp; : &nbsp; باش تعرف حظك، إشترك في الخدمة </title>
+
+    <link rel="apple-touch-icon" href="assets/images/horoscop-icon.png">
+
+    <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico.png" />
+    <link rel="stylesheet" href="assets/css/bootstrap css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/bootstrap css/bootstrap-iso.css">
+    <link rel="stylesheet" href="assets/css/bootstrap css/bootstrap-datepicker3.css"/>    
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">    
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap css/bootstrap-iso.css">
+    <link rel="stylesheet" href="css/bootstrap css/bootstrap-datepicker3.css"/>
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script>
+
+  jQuery(window).load(function () {
+
+      "use strict";
+
+              if(  jQuery( '.et-bfb' ).length <= 0 && jQuery( '.et-fb' ).length <= 0  ){
+
+               jQuery(".status").fadeOut();
+
+              jQuery(".preloader").delay(1000).fadeOut("slow");
+
+              }else{
+
+              jQuery(".preloader").css('display','none');
+
+              }
+
+  });
+
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '490324251576294'); 
+      fbq('track', 'PageView');
+</script>
+    <noscript>
+      <img height="1" width="1" 
+      src="https://www.facebook.com/tr?id=490324251576294&ev=PageView
+      &noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <Script>
+            $(document).ready(function(){
+                $(".post").keyup(function () {
+                    $this=$(this);
+                    if ($this.val().length >=$this.data("maxlength")) {
+                      if($this.val().length>$this.data("maxlength")){
+                        $this.val($this.val().substring(0,4));
+                      }
+                      $this.next(".post").focus();
+                    }
+                 });
+            });
+        </Script>
+        <script>
+			// Initialize tooltip component
+			$(function () {
+			  $('[data-toggle="tooltip"]').tooltip()
+			})
+			
+			// Initialize popover component
+			$(function () {
+			  $('[data-toggle="popover"]').popover()
+			})
+        </script>
+
+</head>
+
+
+<body>
+  <app-root></app-root>
+
+  <script>
+    $(document).ready(function(){
+      var date_input=$('input[id="date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      date_input.datepicker({
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      })
+    })
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147155174-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-147155174-2');
+  </script>
+
+ 
+    <script type="text/javascript" src="assets/js/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.js"></script>
+    <script src="assets/js/vendor/jquery-ui.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/ajaxchimp.js"></script>
+    <script src="assets/js/scrollUp.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<div data-spy="scroll" data-target=".mainmenu-area">
+   
+     <!-- <div class="preloader">
+
+        <div class="status"></div>
+
+    </div>  -->
+
+    <header class="home-area overlay angle" id="home_page">
+        <div class="container">
+            <div class="row">
+		    	 <div class="col-xs-12 hidden-sm col-md-5">
+                    <figure class="mobile-image wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="assets/images/header-mobile.png" class="img-responsive" alt="">
+                    </figure>
+                 </div>
+                 <div class="col-xs-12 col-md-7" style="text-align:center">
+                    <div class="space-30 hidden-xs"></div>
+                    <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                        <img src="assets/images/Logo.png" class="logo">
+                    </div>
+                    <div class="space-200 hidden-xs header"></div>
+                    <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                        <h3>باش توصلك كل يوم توقعات برجك <br> سجل في خدمة Horoscopi</h3>
+                    </div>
+                    <div class="space-40 hidden-xs"></div>
+                    <a href="#Inscription" class="bttn-insp wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download">التسجيل</i></a>
+                 </div>
+            </div>
+        </div>
+    </header>
+   
+    <section class="section-padding">
+        <div class="container">
+            <div class="row" id="Inscription">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="signup-form">
+
+                        <form name="form" (ngSubmit)="f.form.valid && this.isUseConditionChecked  && this.isGenderChecked && GetInscriptionInsert(gender,cdt1)" #f="ngForm" novalidate>
+                            <div class="insp-area">
+                                  <h2>المعطيات الشخصية</h2>
+                                   <div class="space-40 hidden-xs"></div> 
+
+                                    <div class="form-group">
+                                          <label class="form-title"> 
+                                              <img src="assets/images/Icones/sex-icon.png">                                                                 
+                                              <span> الجنس&nbsp; <span  [ngClass]="{ 'span-invalid': f.submitted &&  !isGenderChecked }"  >*</span>  </span>
+                                          </label>
+                                        <div class="element">
+                                            <input type="radio" id="bouton_1" name="bouton" name="gender" (change)="GenderRadioButtonChange('male')" value="maried">
+                                            <label for="bouton_1">ذكر</label>
+                                        </div>
+                                        <div class="element">
+                                            <input type="radio" id="bouton_2" name="bouton"  name="gender" (change)="GenderRadioButtonChange('female')" value="single">
+                                            <label for="bouton_2">أنثى</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="display: flex;">
+                                        <img src="assets/images/Icones/icone-nom.png">    <!--style="  width: 60%;"-->                            
+                                        <input  type="text"  name="fullname" id="fullname"  [(ngModel)]="fullname" 
+                                        required  (keypress)="OnlyNumbers($event)"   #txtFullname="ngModel"
+                                        [ngClass]="{ 'input-invalid': f.submitted && txtFullname.invalid  }" placeholder="الإسم *"/>
+                                    </div>
+                                    
+                                    <div class="form-group" style="display: flex;">
+                                      <img src="assets/images/Icones/icon-ville.png"> <!--style="  width: 60%;"-->                           
+                                        <input  type="text"   id="ville"  name="city" [(ngModel)]="city" 
+                                        (keypress)="OnlyNumbers($event)" [matAutocomplete]="auto"  (keyup)="GetCountrySearch($event)"   
+                                        required  #txtCity="ngModel"  [ngClass]="{ 'input-invalid': f.submitted && txtCity.invalid }" 
+                                         placeholder="المدينة *"/>
+                                        <mat-autocomplete #auto="matAutocomplete">
+                                            <mat-option *ngFor="let city of countries" [value]="city.libelle">
+                                              {{city.libelle}}
+                                            </mat-option>
+                                        </mat-autocomplete>   
+                                    </div>
+ 
+                                    <div class="form-group" style="display: flex;">
+                                        <label class="form-title"> 
+                                                <span> الترقيم البريدي&nbsp;* </span>                            
+                                                <img src="assets/images/Icones/code-post.png"> 
+                                        </label> 
+                                        <input  type="tel" class="post" name="zip_code" id="zip_code"  mask="0000"  [(ngModel)]="zip_code" 
+                                        required   (input)=" inputValidators($event)"  #txtzip_code="ngModel"
+                                        [ngClass]="{ 'input-invalid': f.submitted && txtzip_code.invalid }"  />
+                                    </div>
+
+                                    <div class="form-group" >
+                                      <label class="form-title"> 
+                                            <span> تاريخ الولادة&nbsp;* </span>                            
+                                            <img src="assets/images/Icones/anni-icon.png"> 
+                                    </label>                                                        
+                                       
+                                         <input class="birthday col-sm-3 unstyled" id="date_birth"  name="date_birth" [(ngModel)]="date_birth" 
+                                        #txtDate="ngModel"  
+                                        [ngClass]="{ 'input-invalid': f.submitted && txtDate.invalid }" required 
+                                         placeholder="dd/mm/yyyy" type="tel" /> 
+                                     </div>
+         
+                                     <div class="form-group" style="display: flex;">
+                                            <label class="form-title"> 
+                                                  <span> رقم الجوال&nbsp;* </span>                            
+                                                  <img src="assets/images/Icones/icon-num.png"> 
+                                          </label> 
+                                           <input dir="ltr" type="tel" class="num col-sm-3" data-maxlength="8" mask="00 000 000" [(ngModel)]="msisdn" 
+                                           name="msisdn"     #txtmob="ngModel"  
+                                           [ngClass]="{ 'input-invalid': f.submitted && txtmob.invalid }"  (change)="GetMobile(msisdn)" required>
+                                          <label class="nat-code">216+</label>
+                                    </div>                                 
+                             </div>
+                             
+	                         <div class="space-50 hidden-xs"></div>                            
+                            
+                        	<div class="form-group">
+
+                            <label class="checkbox-civil">
+                                       
+                                <input type="checkbox" checked="true"  (change)="UseConditionCheckBoxChange($event)">
+                                <span class="checkmark"></span>
+                                    <span  [ngClass]="{ 'label-invalid': f.submitted &&  !this.isUseConditionChecked   }"  >   
+                                        أقبل شروط الإستعمال و سياسية الخصوصية
+                                    </span>
+                            </label> <br>
+                            <label class="checkbox-civil">   
+                                <input type="checkbox" checked="true"  (click)="ConditionChechBoxChange('YES_PUB_SMS',$event)" >
+                                <span class="checkmark"></span>
+                                                أريد استقبال رسائل ترويجية أو حملات اعلانية
+                            </label> <br>
+                            <label class="checkbox-civil">   
+                                <input type="checkbox" checked="true"   (click)="ConditionChechBoxChange('YES_USE_DATA',$event)">
+                                <span class="checkmark"></span>
+                                                أقبل أن تتم معالجة معطياتي الشخصية وفقا لسياسة الخصوصية المنشورة على الصفحة
+                            </label> <br>
+                                
+                            </div>
+
+                            <div class="form-group text center">
+                            <!-- <div class="space-50 hidden-xs"></div>     -->
+                            
+                            <div class=""></div>   
+                            <div  class ="captchaV2 col-sm-3" [formGroup]="aFormGroup">
+                                <ngx-recaptcha2 #captchaElem   
+                                [siteKey]="siteKey"
+                                (reset)="handleReset()"
+                                (expire)="handleExpire()"
+                                (load)="handleLoad()"
+                                (success)="handleSuccess($event)"
+                                [useGlobalDomain]="useGlobalDomain"
+                                [size]="size"
+                                [hl]="lang"
+                                [theme]="theme"
+                                [type]="type"
+                                formControlName="recaptcha"
+                                [hidden]="isRecaptachHidden">
+                                 </ngx-recaptcha2>
+                            </div>
+
+
+                            <div class="form-group form-button"  [hidden]="!isMessageHidden"  *ngIf="!isBtnInscription">
+                                <button class="btn btn-light" type="submit">أسجل الأن</button>
+                            </div>
+
+                            <div class="form-group form-button" [hidden]="!isMessageAlert" >                               
+                                <label class="alert alert-danger" role="alert" >
+                                        <i  class="mdi mdi-alert-circle" ></i> 
+                                        {{MsgAlert}} 
+                                 </label>    
+                              </div>  
+
+
+                            <div *ngIf="f.submitted && f.form.invalid " class="alert alert-danger" role="alert"><i
+                                class="mdi mdi-alert-circle"></i><h5>يرجى إدخال المعلومات المطلوبة</h5>
+
+                            </div>
+                        
+
+                            <div class="form-group form-button" [hidden]="isMessageHidden" >                               
+                                    <p  class="alert alert-info" role="alert" >
+                                            <i  class="mdi mdi-alert-circle" ></i> 
+                                            لإنهاء التسجيل ، الرجاء إدخال رمز التفعيل المرسل الى هاتفك الجوال. سعر الخدمة: 70 مليم/الإرسالية</p>    
+                            </div> 
+                            </div>
+                      </form>
+      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <footer class="footer-area" id="contact_page"> 
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="footer-box logo">
+                         	<a routerLink="/inscription" ><img src="assets/images/Logo.png"></a>
+                            <p> باش تعرف حظك، إشترك في Horoscopi<br> يوصلك كل يومSMS  فيه  توقعات برجك.</p>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>   
+                            <a style="color:#fff" class="mail">Hello@horoscopi.tn</a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-md-4">
+                    <div class="space-100"></div>
+                    
+                  
+
+                        <div class="footer-box nav-menu">
+                            <ul>
+                                <li><a href="#Inscription">تسجيل</a></li>
+                                <li><a routerLink="/termes" target="_blank">شروط الإستخدام</a></li>
+                                <li><a routerLink="/confidentialite" target="_blank">سياسة الخصوصية</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-md-4">
+                        <div class="footer-box about">
+                            <h4>  من نحن </h4>
+                            <p> Horoscopi خدمة ترفيهية، لتلقي التوقعات اليومية للأبراج بالعربية عبر الإرساليات القصيرة. سعر الخدمة: 70 مليم/الإرسالية </p>
+                        </div>
+                        <div class="footer-box scl-md">
+                            <ul>                                                                        
+                        		<li><a href="https://www.facebook.com/Horoscopi-100206528054633/" target="_blank"><img src="assets/images/Social media/fb.png"></a></li>
+                        		<li><a href="https://www.instagram.com/horoscopi.tn/" target="_blank"><img src="assets/images/Social media/inst.png"></a></li>
+                            </ul>                                                                   
+						</div>
+                    </div>                                    
+                </div>
+                <div class="col-xs-12">
+                	<p class="text-center">خدمة مطورة من قبل &nbsp; <a href="https://www.l-2t.com/" target="_blank"><img src="assets/images/L2T.png"></a></p>
+                </div>
+            </div>
+        </div>
+    </footer> 
+
+</div>
+
